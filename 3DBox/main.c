@@ -9,14 +9,14 @@
 #include <stdio.h>
 
 struct ThreeDBox {
-    float a;
-    float b;
-    float c;
+    float height;
+    float width;
+    float depth;
 };
 
 float volume(struct ThreeDBox box);
 
-struct ThreeDBox createThreeDBox (float a, float b, float c);
+struct ThreeDBox createThreeDBox (float height, float weight, float depth);
 
 float timesOfVolumeComparison(struct ThreeDBox box1, struct ThreeDBox box2);
 
@@ -28,14 +28,14 @@ int main(int argc, const char * argv[]) {
 // Function bodies
 
 float volume(struct ThreeDBox box) {
-    return box.a * box.b * box.c;
+    return box.height * box.width * box.depth;
 }
 
-struct ThreeDBox createThreeDBox (float a, float b, float c){
+struct ThreeDBox createThreeDBox (float height, float width, float depth){
     struct ThreeDBox newBox;
-    newBox.a = a;
-    newBox.b = b;
-    newBox.c = c;
+    newBox.height = height;
+    newBox.width = width;
+    newBox.depth = depth;
     return newBox;
 };
 
